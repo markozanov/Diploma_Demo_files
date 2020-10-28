@@ -19,11 +19,18 @@ rows = string_array.split(",")
 for i in range(0, len(rows)):
     array += [int(rows[i])]
 
+
 fibonacci_of_all_elements = []
 
 for i in range(0, len(array)):
     fibonacci_of_all_elements += [fibonacci(array[i])]
 
-print(fibonacci_of_all_elements)
+# print(fibonacci_of_all_elements)
+f = open("../fibonacci.txt", "w")
+for i in range(0, 60):
+    f.write(str(fibonacci_of_all_elements))
+f.close()
+
+
 
 
