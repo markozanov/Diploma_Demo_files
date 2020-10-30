@@ -1,13 +1,28 @@
 f = open("../demoGB.txt", "r")
-string_array = f.read()
+
+
+results = []
+
+AVG = 0
+SUM = 0
+COUNTER = 0
+x = 0
+while True:
+    line = f.read(10)
+    if line == "":
+        break
+    numbers = line.split(",")
+    x += 1
+    print(str(numbers) + " " + str(x))
+
+    SUM += int(numbers[0]) + int(numbers[1])
+    COUNTER += 2
+    AVG = (AVG + SUM) / COUNTER
+
+
 f.close()
-array = []
-
-
-rows = string_array.split(",")
-for i in range(0, len(rows)):
-    array += [int(rows[i])]
-
-array.sort(reverse=True)
-take_n = array[:125000]
-print(take_n)
+w = open("../demoGBLSResult.txt", "w")
+for i in range(0, 210000):
+    w.write(str(AVG))
+    w.write(",")
+w.close()

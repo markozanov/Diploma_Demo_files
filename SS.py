@@ -7,7 +7,7 @@ array_to_sort = []
 
 rows = string_array.split(",")
 for i in range(0, len(rows)):
-    array_to_sort += [int(rows[i])]
+    array_to_sort.append([int(rows[i])])
 
 print(array_to_sort)
 
