@@ -17,7 +17,7 @@ array = []
 
 rows = string_array.split(",")
 for i in range(0, len(rows)):
-    array.append([int(rows[i])])
+    array.append(int(rows[i]))
 
 
 fibonacci_of_all_elements = []
