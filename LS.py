@@ -1,6 +1,5 @@
 f = open("../demoGB.txt", "r")
 
-
 results = []
 
 AVG = 0
